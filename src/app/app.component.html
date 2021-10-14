@@ -1,6 +1,5 @@
 <h1>Board Games are Awesome!</h1>
-<p>
-  What's your favorite board game? <input class ="btn btn-success"type="text" [(ngModel)]="usergame" (keydown.enter)="whichGame()"> My favorite is {{game}}.
-</p>
-
-<p></p>
+<p>What's your favorite board game?</p>
+<input class ="form-control" type="text" [(ngModel)]="usergame" (keydown.enter)="onGame()">
+<p>My favorite is {{game}}.</p>
+<p>Let's go ahead and play {{ play }}!</p>
