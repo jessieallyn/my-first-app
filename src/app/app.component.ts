@@ -8,14 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'first-exercise';
   game = "Pandemic";
+  anygame = "something";
   usergame = "";
-  whichGame() {
+  play ="";
+  onGame() {
     if (this.game.length <= this.usergame.length) {
-      console.log("Ok, let's play" + this.usergame)
+      this.play = this.usergame;
     }
-    else {
-      console.log("Ok, we're going to play" + this.game + "anyways")
+    if (this.usergame.length > 0 && this.game.length > this.usergame.length) {
+      this.play = this.game;
     }
-
+    if(this.usergame.length == 0) {
+      this.play = this.anygame;
+    }
+    return this.play;
   }
 }
